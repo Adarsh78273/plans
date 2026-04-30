@@ -1,0 +1,9 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f2f2f2; /* MMT Light Grey */
+  font-family: 'Inter', sans-serif;
+}

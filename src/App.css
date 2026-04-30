@@ -1,0 +1,895 @@
+/* .counter {
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+  margin-bottom: 24px;
+
+  &:hover {
+    border-color: var(--accent-border);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+.hero {
+  position: relative;
+
+  .base,
+  .framework,
+  .vite {
+    inset-inline: 0;
+    margin: 0 auto;
+  }
+
+  .base {
+    width: 170px;
+    position: relative;
+    z-index: 0;
+  }
+
+  .framework,
+  .vite {
+    position: absolute;
+  }
+
+  .framework {
+    z-index: 1;
+    top: 34px;
+    height: 28px;
+    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
+      scale(1.4);
+  }
+
+  .vite {
+    z-index: 0;
+    top: 107px;
+    height: 26px;
+    width: auto;
+    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
+      scale(0.8);
+  }
+}
+
+#center {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  place-content: center;
+  place-items: center;
+  flex-grow: 1;
+
+  @media (max-width: 1024px) {
+    padding: 32px 20px 24px;
+    gap: 18px;
+  }
+}
+
+#next-steps {
+  display: flex;
+  border-top: 1px solid var(--border);
+  text-align: left;
+
+  & > div {
+    flex: 1 1 0;
+    padding: 32px;
+    @media (max-width: 1024px) {
+      padding: 24px 20px;
+    }
+  }
+
+  .icon {
+    margin-bottom: 16px;
+    width: 22px;
+    height: 22px;
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+#docs {
+  border-right: 1px solid var(--border);
+
+  @media (max-width: 1024px) {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+#next-steps ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+  margin: 32px 0 0;
+
+  .logo {
+    height: 18px;
+  }
+
+  a {
+    color: var(--text-h);
+    font-size: 16px;
+    border-radius: 6px;
+    background: var(--social-bg);
+    display: flex;
+    padding: 6px 12px;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: var(--shadow);
+    }
+    .button-icon {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      flex: 1 1 calc(50% - 8px);
+    }
+
+    a {
+      width: 100%;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+  }
+}
+
+#spacer {
+  height: 88px;
+  border-top: 1px solid var(--border);
+  @media (max-width: 1024px) {
+    height: 48px;
+  }
+}
+
+.ticks {
+  position: relative;
+  width: 100%;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: -4.5px;
+    border: 5px solid transparent;
+  }
+
+  &::before {
+    left: 0;
+    border-left-color: var(--border);
+  }
+  &::after {
+    right: 0;
+    border-right-color: var(--border);
+  }
+} */
+/* ============================================
+   WANDERLUST — PREMIUM CSS
+   Luxury Travel Aesthetic
+   Fonts: Cormorant Garamond + DM Sans
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* ── CSS Variables ── */
+:root {
+  --gold:        #c9a84c;
+  --gold-light:  #e8c97a;
+  --gold-muted:  #f3e8c4;
+  --forest:      #064e3b;
+  --forest-deep: #022c22;
+  --forest-mid:  #065f46;
+  --cream:       #faf8f3;
+  --cream-dark:  #f0ede4;
+  --slate-soft:  #e8edf2;
+  --text-dark:   #1a1a2e;
+  --text-muted:  #6b7280;
+
+  --shadow-gold: 0 4px 24px rgba(201,168,76,0.18);
+  --shadow-card: 0 2px 20px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.05);
+  --shadow-deep: 0 8px 40px rgba(6,78,59,0.15), 0 2px 8px rgba(0,0,0,0.08);
+
+  --radius-sm:  8px;
+  --radius-md:  16px;
+  --radius-lg:  24px;
+  --radius-xl:  36px;
+}
+
+/* ── Global Reset & Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text-dark);
+  letter-spacing: 0.01em;
+}
+
+/* ── Premium Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream-dark); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--gold), var(--forest-mid));
+  border-radius: 99px;
+}
+
+/* ── Selection Color ── */
+::selection {
+  background: var(--gold-muted);
+  color: var(--forest-deep);
+}
+
+/* ─────────────────────────────────────
+   NAVBAR — Glassy Premium Bar
+───────────────────────────────────── */
+nav,
+.navbar,
+header {
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background: rgba(250, 248, 243, 0.88) !important;
+  border-bottom: 1px solid rgba(201,168,76,0.2);
+  box-shadow: 0 1px 12px rgba(6,78,59,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ─────────────────────────────────────
+   HERO SECTION — Immersive Dark Green
+───────────────────────────────────── */
+.bg-\[\#064e3b\] {
+  background: linear-gradient(
+    135deg,
+    var(--forest-deep) 0%,
+    var(--forest) 50%,
+    var(--forest-mid) 100%
+  ) !important;
+  position: relative;
+}
+
+/* Gold shimmer line at bottom of hero */
+.bg-\[\#064e3b\]::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent,
+    var(--gold-light),
+    var(--gold),
+    var(--gold-light),
+    transparent
+  );
+}
+
+/* Hero Title — Serif Luxury */
+.text-5xl,
+.text-7xl {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.03em !important;
+  text-shadow: 0 2px 30px rgba(0,0,0,0.3);
+}
+
+/* Hero Subtitle */
+.text-emerald-200 {
+  color: var(--gold-light) !important;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.75rem !important;
+}
+
+/* ─────────────────────────────────────
+   SEARCH BAR — Refined Glass
+───────────────────────────────────── */
+.bg-white.rounded-2xl.shadow-2xl {
+  background: rgba(255,255,255,0.97) !important;
+  border: 1px solid rgba(201,168,76,0.25) !important;
+  box-shadow:
+    0 20px 60px rgba(6,78,59,0.15),
+    0 4px 16px rgba(0,0,0,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.9) !important;
+  border-radius: var(--radius-lg) !important;
+}
+
+/* Search input */
+.bg-white.rounded-2xl.shadow-2xl input {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 400;
+  color: var(--text-dark) !important;
+}
+
+.bg-white.rounded-2xl.shadow-2xl input::placeholder {
+  color: #a8b0bc !important;
+  font-weight: 300;
+}
+
+/* Search Button */
+.bg-emerald-600:not(.rounded-full) {
+  background: linear-gradient(135deg, var(--forest-mid), var(--forest)) !important;
+  border: 1px solid rgba(201,168,76,0.3);
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.bg-emerald-600:not(.rounded-full)::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--gold-muted), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bg-emerald-600:not(.rounded-full):hover {
+  background: linear-gradient(135deg, var(--gold), #b8923e) !important;
+  box-shadow: var(--shadow-gold);
+  transform: translateY(-1px);
+}
+
+.bg-emerald-600:not(.rounded-full):hover::before { opacity: 1; }
+
+/* ─────────────────────────────────────
+   TRIP DASHBOARD CARD
+───────────────────────────────────── */
+.bg-white.rounded-3xl {
+  background: #ffffff !important;
+  border: 1px solid rgba(201,168,76,0.15) !important;
+  box-shadow: var(--shadow-card) !important;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.bg-white.rounded-3xl:hover {
+  box-shadow: var(--shadow-deep) !important;
+  transform: translateY(-2px);
+}
+
+/* Dashboard Title */
+.text-2xl.font-bold.text-slate-800 {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 600;
+  font-size: 1.6rem !important;
+  color: var(--text-dark) !important;
+}
+
+/* Weather Temp */
+.text-2xl.font-black.text-emerald-700 {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 2rem !important;
+  color: var(--forest) !important;
+}
+
+/* ─────────────────────────────────────
+   MAP CONTAINER
+───────────────────────────────────── */
+.rounded-\[2\.5rem\] {
+  border-radius: var(--radius-xl) !important;
+  border: 1px solid rgba(201,168,76,0.2) !important;
+  box-shadow: var(--shadow-deep) !important;
+  overflow: hidden;
+}
+
+/* ─────────────────────────────────────
+   SECTION HEADING
+───────────────────────────────────── */
+.text-xl.font-bold.text-slate-800 {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em;
+}
+
+/* Gold accent bar */
+.w-2.h-8.bg-emerald-500.rounded-full {
+  background: linear-gradient(180deg, var(--gold), var(--forest-mid)) !important;
+  width: 3px !important;
+  border-radius: 99px !important;
+}
+
+/* ─────────────────────────────────────
+   EXPERIENCE CARDS — Luxury Travel Cards
+───────────────────────────────────── */
+.bg-white.rounded-3xl.overflow-hidden {
+  border: 1px solid rgba(201,168,76,0.15) !important;
+  box-shadow: var(--shadow-card) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.bg-white.rounded-3xl.overflow-hidden:hover {
+  box-shadow:
+    0 12px 40px rgba(6,78,59,0.15),
+    0 4px 16px rgba(201,168,76,0.12) !important;
+  transform: translateY(-4px);
+  border-color: rgba(201,168,76,0.3) !important;
+}
+
+/* Card image overlay */
+.bg-white.rounded-3xl.overflow-hidden .absolute.inset-0 {
+  background: linear-gradient(
+    180deg,
+    transparent 30%,
+    rgba(6,30,24,0.6) 100%
+  ) !important;
+}
+
+/* Place name on card */
+.text-white.font-bold.text-lg {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em;
+}
+
+/* Pricing Toggle Button */
+.absolute.bottom-3.right-3 {
+  background: rgba(255,255,255,0.95) !important;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(201,168,76,0.3) !important;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  font-size: 0.65rem;
+  color: var(--forest-deep) !important;
+  transition: all 0.2s ease !important;
+}
+
+.absolute.bottom-3.right-3:hover {
+  background: var(--gold) !important;
+  color: white !important;
+  border-color: var(--gold) !important;
+}
+
+/* Pricing Options Panel */
+.bg-emerald-50\/50 {
+  background: var(--cream) !important;
+  border-top: 1px solid rgba(201,168,76,0.15) !important;
+}
+
+/* Price option buttons */
+.bg-emerald-50\/50 button {
+  background: #ffffff !important;
+  border: 1px solid rgba(201,168,76,0.15) !important;
+  transition: all 0.2s ease !important;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.bg-emerald-50\/50 button:hover {
+  border-color: var(--gold) !important;
+  background: var(--gold-muted) !important;
+  transform: translateX(2px);
+}
+
+.text-emerald-700.font-bold {
+  color: var(--forest) !important;
+  font-weight: 600 !important;
+}
+
+/* ─────────────────────────────────────
+   SERVICE CARDS (Transport / Hotel / Food)
+───────────────────────────────────── */
+.bg-orange-100 {
+  background: linear-gradient(135deg, #fff3e8, #ffe4c4) !important;
+}
+.bg-sky-100 {
+  background: linear-gradient(135deg, #e8f4ff, #c4dcff) !important;
+}
+.bg-rose-100 {
+  background: linear-gradient(135deg, #fff0f3, #ffd4dc) !important;
+}
+
+/* Icon wrapper hover */
+.group:hover .group-hover\:rotate-6 {
+  transform: rotate(6deg) scale(1.08) !important;
+}
+
+/* Edit Details link */
+.text-emerald-600.uppercase {
+  color: var(--gold) !important;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+/* ─────────────────────────────────────
+   TRIP SUMMARY SIDEBAR — Premium Dark
+───────────────────────────────────── */
+.bg-\[\#064e3b\].p-8.rounded-\[2\.5rem\] {
+  background: linear-gradient(
+    160deg,
+    var(--forest-deep) 0%,
+    var(--forest) 60%,
+    #0a6647 100%
+  ) !important;
+  border: 1px solid rgba(201,168,76,0.2) !important;
+  box-shadow:
+    0 24px 60px rgba(6,30,24,0.35),
+    inset 0 1px 0 rgba(201,168,76,0.1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative gold corner */
+.bg-\[\#064e3b\].p-8.rounded-\[2\.5rem\]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at top right, rgba(201,168,76,0.12), transparent);
+  pointer-events: none;
+}
+
+/* Sidebar title */
+.text-2xl.font-bold.border-b-2.border-emerald-400 {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  border-color: var(--gold) !important;
+  letter-spacing: 0.03em;
+}
+
+/* Line items */
+.border-b.border-emerald-800\/50 {
+  border-color: rgba(201,168,76,0.15) !important;
+}
+
+/* Grand Total */
+.text-4xl.font-black.text-white {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 2.8rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em;
+}
+
+/* Total label */
+.text-emerald-200.font-bold {
+  color: var(--gold-light) !important;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+/* BOOK NOW Button */
+.bg-white.text-emerald-900 {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold)) !important;
+  color: var(--forest-deep) !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  font-size: 0.75rem !important;
+  border: none !important;
+  box-shadow: 0 8px 24px rgba(201,168,76,0.4), 0 2px 8px rgba(0,0,0,0.2) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-white.text-emerald-900::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.3), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.bg-white.text-emerald-900:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(201,168,76,0.5), 0 4px 12px rgba(0,0,0,0.25) !important;
+}
+
+.bg-white.text-emerald-900:hover::before { opacity: 1; }
+
+/* Empty state */
+.bg-emerald-900\/40 {
+  background: rgba(6,30,24,0.5) !important;
+  border: 1px dashed rgba(201,168,76,0.25) !important;
+}
+
+/* Reset button */
+.text-emerald-300 {
+  color: var(--gold-light) !important;
+  letter-spacing: 0.1em;
+  font-size: 0.6rem;
+}
+
+/* ─────────────────────────────────────
+   PAGE BACKGROUND
+───────────────────────────────────── */
+.bg-\[\#f1f5f9\] {
+  background: var(--cream) !important;
+}
+
+/* ─────────────────────────────────────
+   ANIMATIONS
+───────────────────────────────────── */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gold-shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
+}
+
+/* Float animation for weather icon */
+.rounded-full.bg-emerald-50 {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ─────────────────────────────────────
+   COUNTER (Vite Starter Template)
+───────────────────────────────────── */
+.counter {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 20px;
+  border-radius: 99px;
+  color: var(--forest);
+  background: var(--gold-muted);
+  border: 1.5px solid transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.02em;
+}
+
+.counter:hover {
+  border-color: var(--gold);
+  background: var(--gold-muted);
+  box-shadow: var(--shadow-gold);
+  transform: translateY(-1px);
+}
+
+.counter:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* ─────────────────────────────────────
+   HERO GRAPHIC (Vite)
+───────────────────────────────────── */
+.hero {
+  position: relative;
+  filter: drop-shadow(0 8px 24px rgba(201,168,76,0.25));
+}
+
+.hero .base {
+  width: 170px;
+  position: relative;
+  z-index: 0;
+}
+
+.hero .framework,
+.hero .vite {
+  inset-inline: 0;
+  margin: 0 auto;
+  position: absolute;
+}
+
+.hero .framework {
+  z-index: 1;
+  top: 34px;
+  height: 28px;
+  transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg) scale(1.4);
+}
+
+.hero .vite {
+  z-index: 0;
+  top: 107px;
+  height: 26px;
+  width: auto;
+  transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg) scale(0.8);
+}
+
+/* ─────────────────────────────────────
+   LAYOUT (Vite)
+───────────────────────────────────── */
+#center {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  place-content: center;
+  place-items: center;
+  flex-grow: 1;
+  background: var(--cream);
+}
+
+@media (max-width: 1024px) {
+  #center {
+    padding: 32px 20px 24px;
+    gap: 20px;
+  }
+}
+
+/* ─────────────────────────────────────
+   NEXT STEPS (Vite)
+───────────────────────────────────── */
+#next-steps {
+  display: flex;
+  border-top: 1px solid rgba(201,168,76,0.2);
+  text-align: left;
+  background: var(--cream);
+}
+
+#next-steps > div {
+  flex: 1 1 0;
+  padding: 32px;
+}
+
+@media (max-width: 1024px) {
+  #next-steps > div { padding: 24px 20px; }
+}
+
+#next-steps .icon {
+  margin-bottom: 16px;
+  width: 22px;
+  height: 22px;
+  color: var(--gold);
+}
+
+@media (max-width: 1024px) {
+  #next-steps {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+#docs {
+  border-right: 1px solid rgba(201,168,76,0.2);
+}
+
+@media (max-width: 1024px) {
+  #docs {
+    border-right: none;
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+  }
+}
+
+#next-steps ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+  margin: 32px 0 0;
+}
+
+#next-steps ul .logo { height: 18px; }
+
+#next-steps ul a {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-dark);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  background: var(--cream-dark);
+  border: 1px solid rgba(201,168,76,0.15);
+  display: flex;
+  padding: 6px 14px;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+#next-steps ul a:hover {
+  background: var(--gold-muted);
+  border-color: var(--gold);
+  box-shadow: var(--shadow-gold);
+  transform: translateY(-1px);
+}
+
+#next-steps ul a .button-icon {
+  height: 18px;
+  width: 18px;
+}
+
+@media (max-width: 1024px) {
+  #next-steps ul {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #next-steps ul li { flex: 1 1 calc(50% - 8px); }
+  #next-steps ul a {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+}
+
+/* ─────────────────────────────────────
+   SPACER & TICKS
+───────────────────────────────────── */
+#spacer {
+  height: 88px;
+  border-top: 1px solid rgba(201,168,76,0.15);
+}
+
+@media (max-width: 1024px) {
+  #spacer { height: 48px; }
+}
+
+.ticks {
+  position: relative;
+  width: 100%;
+}
+
+.ticks::before,
+.ticks::after {
+  content: '';
+  position: absolute;
+  top: -4.5px;
+  border: 5px solid transparent;
+}
+
+.ticks::before {
+  left: 0;
+  border-left-color: rgba(201,168,76,0.4);
+}
+
+.ticks::after {
+  right: 0;
+  border-right-color: rgba(201,168,76,0.4);
+}
+
+/* ─────────────────────────────────────
+   RESPONSIVE POLISH
+───────────────────────────────────── */
+@media (max-width: 768px) {
+  .text-5xl { font-size: 2.8rem !important; }
+  .text-7xl { font-size: 3.5rem !important; }
+}

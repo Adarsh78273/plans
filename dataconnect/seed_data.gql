@@ -1,0 +1,45 @@
+mutation SeedWanderlustData @transaction @auth(level: USER, insecureReason: "This mutation is for seeding initial data and is protected by user authentication.") {
+  # Insert Destinations first
+  destination_insertMany(data: [
+    {
+      id: "dest-123",
+      name: "Eiffel Tower",
+      location: "Paris, France",
+      description: "An iconic landmark.",
+      imageUrl: "https://example.com/eiffel.jpg",
+      averageRating: 4.8
+    },
+    {
+      id: "dest-456",
+      name: "Grand Canyon",
+      location: "Arizona, USA",
+      description: "A majestic natural wonder.",
+      imageUrl: "https://example.com/grandcanyon.jpg",
+      averageRating: 4.9
+    }
+  ])
+  # Then insert Reviews, referencing the Destination IDs
+  review_insertMany(data: [
+    {
+      id: "review-1",
+      destinationId: "dest-123",
+      rating: 5,
+      comment: "Absolutely breathtaking!",
+      reviewerName: "Traveler1"
+    },
+    {
+      id: "review-2",
+      destinationId: "dest-123",
+      rating: 4,
+      comment: "Crowded, but worth it.",
+      reviewerName: "ExplorerJane"
+    },
+    {
+      id: "review-3",
+      destinationId: "dest-456",
+      rating: 5,
+      comment: "Unforgettable views!",
+      reviewerName: "NatureLover"
+    }
+  ])
+}
