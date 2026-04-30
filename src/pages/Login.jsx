@@ -31,7 +31,7 @@ const Login = () => {
         {/* Branding Section */}
         <div className="mb-10">
           <h1 className="text-4xl font-black text-emerald-900 mb-2 flex justify-center items-center gap-2">
-            WanderLust <span className="text-3xl">🌎</span>
+            Plans<span className="text-3xl">🌎</span>
           </h1>
           <div className="h-1 w-20 bg-emerald-500 mx-auto rounded-full"></div>
           <p className="text-slate-500 mt-4 font-medium">Please sign in to your account</p>
